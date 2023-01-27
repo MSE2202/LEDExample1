@@ -1,6 +1,6 @@
 /*
 
-  MSE 2202 Example 1
+  LEDExample1
   Language: Arduino
   Author: Michael Naish
   Date: 23/01/26
