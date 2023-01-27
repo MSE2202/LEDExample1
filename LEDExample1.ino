@@ -6,21 +6,21 @@
   Date: 23/01/26
 
   This code will create a "sweep" of LEDs moving in sequence. For full effect, the number of LEDs in the sweep
-  pattern should be less than the total number of LEDs
+  pattern should be less than the total number of LEDs. It is assumed that LEDs are connected to GPIO pins.
 
   Rev 1 - Initial version 
   
 */
 
 const int ledPins[] = {
-  4, 16, 17, 18};                          // select the digital pins for the LEDs
-const int numberLEDs = 
-  sizeof(ledPins) / sizeof(ledPins[0]);    // number of LEDs in display
-int sweep = 3;                             // number of LEDs in sweep pattern
-int state = 0;                             // current state of LEDs
-unsigned long prevMillis = 0;              // start time for delay cycle, in milliseconds
-unsigned long curMillis = 0;               // current time, in milliseconds
-unsigned long rate = 300;                  // time delay for switching effect
+  4, 16, 17, 18};                                // select the digital pins for the LEDs
+const int numberLEDs =                          
+  sizeof(ledPins) / sizeof(ledPins[0]);          // number of LEDs in display
+int sweep = 3;                                   // number of LEDs in sweep pattern
+int state = 0;                                   // current state of LEDs
+unsigned long prevMillis = 0;                    // start time for delay cycle, in milliseconds
+unsigned long curMillis = 0;                     // current time, in milliseconds
+unsigned long rate = 300;                        // time delay for switching effect
 
 void setup() {
  // set all LED pins as outputs
